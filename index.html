@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pickleball Tournament</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+.match {
+  border: 1px solid #334155;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+input {
+  width: 40px;
+  text-align: center;
+}
+
+button {
+  margin-top: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>🏆 Pickleball Tournament</h2>
+
+<div id="app"></div>
+
+<script>
+const API = "https://api.baserow.io/api/database/rows/table/962605/?user_field_names=true";
+
+// 🔐 TOKEN (test)
+const TOKEN = "cCCbFgv5g7lTL2CEsAQcmOgO86ee52rm";
+
+// 🔒 password nhập điểm
+const ADMIN_PASS = "123";
+
+// cache để tránh reload dư
+let lastData = "";
+
+// ===== LOAD DATA =====
+async function loadData() {
+  const res = await fetch(API, {
+    headers: { Authorization: "Token " + TOKEN }
+  });
+
+  const data = await res.json();
+
+  // chỉ render khi data thay đổi
+  const json = JSON.stringify(data.results);
+  if (json === lastData) return;
+
+  lastData = json;
+  render(data.results);
+}
+
+// ===== RENDER =====
+function render(rows) {
+  const el = document.getElementById("app");
+  el.innerHTML = "";
+
+  rows.forEach(r => {
+    const div = document.createElement("div");
+    div.className = "match";
+
+    div.innerHTML = `
+      <b>${r.teamA?.value || "TBD"}</b>
+      <input id="a${r.id}" value="${r.scoreA ?? ""}">
+      :
+      <input id="b${r.id}" value="${r.scoreB ?? ""}">
+      <b>${r.teamB?.value || "TBD"}</b>
+      <br>
+      <button onclick="save(${r.id}, ${r.scoreA ?? 0}, ${r.scoreB ?? 0})">Lưu</button>
+    `;
+
+    el.appendChild(div);
+  });
+}
+
+// ===== SAVE SCORE =====
+async function save(id, oldA, oldB) {
+  const pass = prompt("Nhập mật khẩu:");
+  if (pass !== ADMIN_PASS) {
+    alert("Sai mật khẩu!");
+    return;
+  }
+
+  const a = parseInt(document.getElementById("a"+id).value);
+  const b = parseInt(document.getElementById("b"+id).value);
+
+  // không update nếu không đổi
+  if (a === oldA && b === oldB) {
+    alert("Không có thay đổi!");
+    return;
+  }
+
+  await fetch(`https://api.baserow.io/api/database/rows/table/962605/${id}/?user_field_names=true`, {
+    method: "PATCH",
+    headers: {
+      Authorization: "Token " + TOKEN,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      scoreA: a,
+      scoreB: b
+    })
+  });
+
+  alert("Đã lưu!");
+  loadData();
+}
+
+// ===== REALTIME (tiết kiệm API) =====
+setInterval(loadData, 3000);
+
+loadData();
+</script>
+
+</body>
+</html>
