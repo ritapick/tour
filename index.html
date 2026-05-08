@@ -1,625 +1,1875 @@
-<!DOCTYPE html>
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <style>
+                body {
+                  background-color: white; /* Ensure the iframe has a white background */
+                }
+
+                
+              </style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ĐÔI 5.2 - Hoàng Quốc Việt Pickleball 2026</title>
-<style>
-  :root {
-    --primary: #2ecc71;
-    --primary-dark: #27ae60;
-    --danger: #e74c3c;
-    --warning: #f39c12;
-    --dark: #2c3e50;
-    --light: #ecf0f1;
-  }
-  
-  * { box-sizing: border-box; }
-  
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
-    padding: 10px;
-    min-height: 100vh;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOÀNG QUỐC VIỆT PICKLEBALL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-light: #3b82f6;
+            --primary-dark: #1e40af;
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --bg: #e7f7e6;
+            --card: #ffffff;
+            --text: #222f3d;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+        }
 
-  h1 {
-    text-align: center;
-    color: #00ff88;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-    margin: 10px 0 5px;
-    font-size: clamp(18px, 5vw, 32px);
-    font-weight: 700;
-  }
-  
-  h2.title {
-    text-align: center;
-    color: #fff;
-    margin: 0 0 15px;
-    font-size: clamp(14px, 4vw, 24px);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-  }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  .link-bar {
-    text-align: center;
-    margin: 10px 0 15px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .link-bar a {
-    color: #fff;
-    background: var(--dark);
-    padding: 8px 16px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s;
-    border: 1px solid #555;
-  }
-  
-  .link-bar a:hover {
-    background: var(--primary);
-    transform: translateY(-2px);
-  }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-  .block {
-    background: rgba(255,255,255,0.95);
-    color: #333;
-    padding: 12px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    border: 2px solid #444;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  }
+        .header {
+            background: linear-gradient(135deg, #3e4f3c 0%, #457d3e 50%, #309124 100%);
+            color: white;
+            padding: 20px 16px 16px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(26, 86, 219, 0.3);
+        }
 
-  .section-title {
-    padding: 10px 12px;
-    font-weight: 700;
-    background: linear-gradient(90deg, var(--dark), var(--primary-dark));
-    color: #fff;
-    margin: 0 0 12px;
-    border-radius: 8px;
-    font-size: clamp(14px, 2vw, 18px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .section-title .refresh-btn {
-    background: rgba(255,255,255,0.2);
-    border: none;
-    color: #fff;
-    padding: 4px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-  }
-  
-  .section-title .refresh-btn:hover {
-    background: rgba(255,255,255,0.4);
-  }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+            animation: shimmer 8s ease-in-out infinite;
+        }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: clamp(10px, 1.8vw, 14px);
-  }
+        @keyframes shimmer {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20%, 10%); }
+        }
 
-  th {
-    background: #34495e;
-    color: #fff;
-    padding: 8px 6px;
-    font-weight: 600;
-    text-align: center;
-  }
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
 
-  td {
-    border: 1px solid #bdc3c7;
-    padding: 6px 8px;
-    text-align: center;
-    vertical-align: middle;
-  }
+        .header .subtitle {
+            font-size: 0.8rem;
+            opacity: 0.85;
+            margin-top: 4px;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
 
-  tr:nth-child(even) { background: #f8f9fa; }
-  tr:hover { background: #e8f4f8; }
+        .header .ball-icon {
+            font-size: 2rem;
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 1;
+        }
 
-  /* Score cell editable */
-  .score-cell {
-    min-width: 50px;
-    position: relative;
-  }
-  
-  .score-input {
-    width: 100%;
-    padding: 4px 6px;
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    text-align: center;
-    font-weight: 600;
-    font-size: inherit;
-    transition: border-color 0.2s;
-  }
-  
-  .score-input:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.3);
-  }
-  
-  .score-input.saved {
-    border-color: var(--primary);
-    background: #d4edda;
-  }
-  
-  .score-input.error {
-    border-color: var(--danger);
-    background: #f8d7da;
-  }
+        .header .tournament-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 8px;
+            position: relative;
+            z-index: 1;
+        }
 
-  /* Save button */
-  .save-btn {
-    background: var(--primary);
-    color: #fff;
-    border: none;
-    padding: 4px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 11px;
-    font-weight: 600;
-    margin-top: 4px;
-    transition: all 0.2s;
-    width: 100%;
-  }
-  
-  .save-btn:hover {
-    background: var(--primary-dark);
-    transform: translateY(-1px);
-  }
-  
-  .save-btn:disabled {
-    background: #95a5a6;
-    cursor: not-allowed;
-    transform: none;
-  }
-  
-  .save-btn.saving {
-    background: var(--warning);
-    cursor: wait;
-  }
+        .tabs-container {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-bottom: 1px solid var(--border);
+        }
 
-  /* Status message */
-  .status-msg {
-    padding: 8px 12px;
-    margin: 8px 0;
-    border-radius: 6px;
-    font-size: 13px;
-    display: none;
-  }
-  
-  .status-msg.success {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-    display: block;
-  }
-  
-  .status-msg.error {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    display: block;
-  }
+        .tabs {
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 0 8px;
+            gap: 2px;
+        }
 
-  /* Scrollable doi cards */
-  .doi-scroll {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    padding: 8px 4px;
-    scrollbar-width: thin;
-  }
-  
-  .doi-scroll::-webkit-scrollbar {
-    height: 6px;
-  }
-  
-  .doi-scroll::-webkit-scrollbar-thumb {
-    background: #95a5a6;
-    border-radius: 3px;
-  }
-  
-  .doi-card {
-    min-width: 180px;
-    max-width: 220px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
+        .tabs::-webkit-scrollbar {
+            display: none;
+        }
 
-  /* Bracket/Sodo */
-  .sodo-wrapper {
-    overflow: auto;
-    width: 100%;
-    height: 400px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #fff;
-  }
-  
-  .sodo-wrapper iframe {
-    width: 1400px;
-    height: 700px;
-    border: none;
-  }
+        .tab {
+            flex: none;
+            padding: 12px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            background: none;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+            position: relative;
+            transition: all 0.2s ease;
+            border-radius: 8px 8px 0 0;
+            margin-bottom: -1px;
+        }
 
-  /* Loading */
-  .loading {
-    text-align: center;
-    padding: 20px;
-    color: #7f8c8d;
-  }
-  
-  .loading::after {
-    content: "⏳ Đang tải dữ liệu...";
-  }
+        .tab:hover {
+            color: var(--primary);
+            background: rgba(26, 86, 219, 0.05);
+        }
 
-  /* Toast notification */
-  .toast {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--dark);
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    z-index: 1000;
-    animation: slideIn 0.3s ease;
-    max-width: 350px;
-    font-size: 14px;
-  }
-  
-  .toast.success { border-left: 4px solid var(--primary); }
-  .toast.error { border-left: 4px solid var(--danger); }
-  
-  @keyframes slideIn {
-    from { transform: translateX(100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-  }
+        .tab.active {
+            color: var(--primary);
+            background: rgba(26, 86, 219, 0.08);
+        }
 
-  /* Responsive */
-  @media (max-width: 600px) {
-    .block { padding: 8px; }
-    td, th { padding: 4px 5px; }
-    .doi-card { min-width: 150px; }
-  }
-</style>
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .content {
+            padding: 16px;
+            padding-bottom: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title .badge {
+            background: var(--primary);
+            color: white;
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            overflow-x: auto;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-title .icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        table th {
+            background: linear-gradient(135deg, #1e3a5f, #1a56db);
+            color: white;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        table th:first-child {
+            border-radius: 10px 0 0 0;
+            text-align: left;
+            padding-left: 12px;
+        }
+
+        table th:last-child {
+            border-radius: 0 10px 0 0;
+        }
+
+        table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            font-weight: 500;
+            transition: background 0.15s ease;
+        }
+
+        table td:first-child {
+            text-align: left;
+            padding-left: 12px;
+            font-weight: 600;
+        }
+
+        table tr:last-child td:first-child {
+            border-radius: 0 0 0 10px;
+        }
+
+        table tr:last-child td:last-child {
+            border-radius: 0 0 10px 0;
+        }
+
+        table tr:hover td {
+            background: rgba(26, 86, 219, 0.03);
+        }
+
+        table tr:nth-child(even) td {
+            background: rgba(241, 245, 249, 0.5);
+        }
+
+        table tr:nth-child(even):hover td {
+            background: rgba(26, 86, 219, 0.05);
+        }
+
+        .rank-1 td:first-child::before { content: ''; }
+        .rank-2 td:first-child::before { content: ''; }
+        .rank-3 td:first-child::before { content: ''; }
+
+        .points-cell {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        .ratio-cell {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 12px;
+        }
+
+        .spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid var(--border);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .error-msg {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            text-align: center;
+            margin: 16px 0;
+        }
+
+        .sodo-table {
+            width: 100%;
+            font-size: 0.7rem;
+        }
+
+        .sodo-table td, .sodo-table th {
+            padding: 6px 4px;
+            text-align: center;
+            border: 1px solid var(--border);
+            font-weight: 500;
+        }
+
+        .sodo-table th {
+            background: #1e3a5f !important;
+            color: white !important;
+            font-weight: 700;
+            font-size: 0.65rem;
+        }
+
+        .update-time {
+            text-align: center;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            padding: 16px;
+            font-weight: 500;
+        }
+
+        .update-time span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 480px) {
+            .header h1 { font-size: 1.3rem; }
+            .tab { padding: 10px 12px; font-size: 0.7rem; }
+            .content { padding: 12px; }
+            .card { padding: 12px; border-radius: 12px; }
+            table { font-size: 0.75rem; }
+            table th, table td { padding: 8px 6px; }
+        }
+
+        .tab-group-label {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .group-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-a { background: #3b82f6; }
+        .dot-b { background: #ef4444; }
+        .dot-c { background: #10b981; }
+        .dot-d { background: #f59e0b; }
+        .dot-bang { background: #8b5cf6; }
+        .dot-tuk { background: #06b6d4; }
+        .dot-bk { background: #ec4899; }
+        .dot-ck { background: #f97316; }
+        .dot-sodo { background: #6366f1; }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .grid-2 .card {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 640px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .match-card {
+            background: white;
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+
+        .match-card .match-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .match-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+        }
+
+        .match-row + .match-row {
+            border-top: 1px solid var(--border);
+        }
+
+        .match-team {
+            font-weight: 600;
+            font-size: 0.82rem;
+            flex: 1;
+        }
+
+        .match-score {
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--primary);
+            background: rgba(26, 86, 219, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .final-card {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .final-card .trophy {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .final-card .match-label {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: #92400e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .final-card .match-row {
+            background: rgba(255,255,255,0.6);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-bottom: 4px;
+        }
+
+        .final-card .match-team {
+            font-size: 0.95rem;
+        }
+
+        .final-card .match-score {
+            font-size: 1rem;
+            padding: 6px 14px;
+        }
+
+        /* Save button styles */
+        .save-btn {
+            background: linear-gradient(135deg, var(--success), #059669);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .save-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .save-btn:active {
+            transform: translateY(0);
+        }
+
+        .save-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .save-btn.saving {
+            background: linear-gradient(135deg, var(--warning), #d97706);
+        }
+
+        .save-btn.saved {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        }
+
+        .save-btn.error {
+            background: linear-gradient(135deg, var(--danger), #dc2626);
+        }
+
+        .score-input {
+            width: 60px;
+            padding: 4px 6px;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--primary);
+            background: rgba(26, 86, 219, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .score-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.2);
+        }
+
+        .score-input.changed {
+            border-color: var(--warning);
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .score-display {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 800;
+            font-size: 0.85rem;
+            color: var(--primary);
+            background: rgba(26, 86, 219, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .score-separator {
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .match-actions {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .save-all-btn {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 16px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .save-all-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 86, 219, 0.4);
+        }
+
+        .save-all-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--text);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast.success {
+            background: var(--success);
+        }
+
+        .toast.error {
+            background: var(--danger);
+        }
+
+        .refresh-btn {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .refresh-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 86, 219, 0.4);
+        }
+
+        .api-config {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            font-size: 0.78rem;
+        }
+
+        .api-config label {
+            font-weight: 700;
+            color: var(--text);
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .api-config input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-family: monospace;
+        }
+
+        .api-config input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .api-config .hint {
+            color: var(--text-secondary);
+            margin-top: 4px;
+            font-size: 0.7rem;
+        }
+
+        .editable-cell {
+            position: relative;
+        }
+
+        .cell-score-wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .cell-input {
+            width: 32px;
+            padding: 2px 4px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--primary);
+            background: rgba(26, 86, 219, 0.05);
+        }
+
+        .cell-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(26, 86, 219, 0.2);
+        }
+
+        .cell-input.changed {
+            border-color: var(--warning);
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .cell-separator {
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .edit-mode-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+            background: var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-switch.active {
+            background: var(--primary);
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .toggle-switch.active::after {
+            transform: translateX(20px);
+        }
+
+        .toggle-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .edit-indicator {
+            display: none;
+            font-size: 0.7rem;
+            color: var(--warning);
+            font-weight: 600;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .edit-indicator.visible {
+            display: flex;
+        }
+
+        .pending-dots {
+            display: inline-flex;
+            gap: 3px;
+        }
+
+        .pending-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--warning);
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .pending-dot:nth-child(2) { animation-delay: 0.3s; }
+        .pending-dot:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .status-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid var(--border);
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.72rem;
+            z-index: 50;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+
+        .status-bar .status-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success);
+        }
+
+        .status-dot.disconnected {
+            background: var(--danger);
+        }
+
+        .status-dot.loading {
+            background: var(--warning);
+            animation: pulse 1s ease-in-out infinite;
+        }
+    </style>
 </head>
 <body>
+    <div class="header">
+        <div class="tournament-logo">🏸</div>
+        <div class="ball-icon">🌕</div>
+        <h1>HOÀNG QUỐC VIỆT PICKLEBALL</h1>
+        <div class="subtitle">Giải đấu HOÀNG QUỐC VIỆT và Những Người Bạn – 2026</div>
+    </div>
 
-<h1>🏆 HOÀNG QUỐC VIỆT PICKLEBALL 2026</h1>
-<h2 class="title">ĐÔI 5.2 - ĐƠN DƯƠNG</h2>
-<h2 class="title">📅 04/04/2026</h2>
+    <div class="tabs-container">
+        <div class="tabs" id="tabs">
+            <button class="tab active" data-tab="bangnhom">
+                <span class="tab-group-label"><span class="group-dot dot-a"></span> BẢNG XẾP HẠNG</span>
+            </button>
+            <button class="tab" data-tab="vongbang">
+                <span class="tab-group-label"><span class="group-dot dot-bang"></span> Vòng bảng</span>
+            </button>
+            <button class="tab" data-tab="tuket">
+                <span class="tab-group-label"><span class="group-dot dot-tuk"></span> Tứ kết</span>
+            </button>
+            <button class="tab" data-tab="banket">
+                <span class="tab-group-label"><span class="group-dot dot-bk"></span> Bán kết</span>
+            </button>
+            <button class="tab" data-tab="chungket">
+                <span class="tab-group-label"><span class="group-dot dot-ck"></span> Chung kết</span>
+            </button>
+            <button class="tab" data-tab="sodo">
+                <span class="tab-group-label"><span class="group-dot dot-sodo"></span> Sơ đồ</span>
+            </button>
+        </div>
+    </div>
 
-<div class="link-bar">
-  <a href="https://ductrong49.github.io/Pick/" target="_blank">🏠 Trang chủ</a>
-  <a href="https://ductrong49.github.io/Pick/48.html" target="_blank">🎾 Giải 4.8</a>
-  <button onclick="refreshAll()" style="background:#3498db;color:#fff;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;">🔄 Làm mới</button>
-</div>
+    <div class="content">
+        <div class="api-config" id="api-config">
+            <label>️ Cấu hình Apps Script URL:</label>
+            <input type="text" id="script-url" placeholder="https://script.google.com/macros/s/XXXXX/exec">
+            <div class="hint">Nhập URL Google Apps Script Web App để kích hoạt tính năng lưu tỷ số</div>
+        </div>
 
-<div id="toast-container"></div>
+        <div class="section-header">
+            <div class="section-title" id="section-title">
+                Bảng thi đấu <span class="badge">Vòng loại</span>
+            </div>
+            <div class="edit-mode-toggle">
+                <span class="edit-indicator" id="edit-indicator">
+                    <span class="pending-dots">
+                        <span class="pending-dot"></span>
+                        <span class="pending-dot"></span>
+                        <span class="pending-dot"></span>
+                    </span>
+                    Có thay đổi chưa lưu
+                </span>
+                <span class="toggle-label">Chế độ chỉnh sửa</span>
+                <div class="toggle-switch" id="edit-toggle"></div>
+            </div>
+        </div>
 
-<!-- DANH SÁCH ĐỘI -->
-<div class="block">
-  <div class="section-title">
-    <span>👥 DANH SÁCH ĐỘI</span>
-    <button class="refresh-btn" onclick="loadDoiOrdered()">↻</button>
-  </div>
-  <div id="sheet-doi" class="loading"></div>
-</div>
+        <div class="tab-content active" id="tab-bangnhom">
+            <div class="section-title">Bảng thi đấu <span class="badge">Vòng loại</span></div>
+            <div class="grid-2" id="bangnhom-container">
+                <div class="loading"><div class="spinner"></div><div class="loading-text">Đang tải dữ liệu...</div></div>
+            </div>
+        </div>
 
-<!-- BẢNG THI ĐẤU -->
-<div class="block">
-  <div class="section-title">
-    <span>📊 BẢNG THI ĐẤU</span>
-    <button class="refresh-btn" onclick="loadBangOrdered()">↻</button>
-  </div>
-  <div id="sheet-bang" class="loading"></div>
-</div>
+        <div class="tab-content" id="tab-vongbang">
+            <div class="section-title">Thi đấu vòng bảng <span class="badge">Chi tiết</span></div>
+            <div id="vongbang-container">
+                <div class="loading"><div class="spinner"></div><div class="loading-text">Đang tải dữ liệu...</div></div>
+            </div>
+        </div>
 
-<!-- VÒNG LOẠI 1/8 -->
-<div class="block">
-  <div class="section-title">
-    <span>🔥 VÒNG LOẠI 1/8</span>
-    <button class="refresh-btn" onclick="loadSheet18()">↻</button>
-  </div>
-  <div id="sheet-18" class="loading"></div>
-</div>
+        <div class="tab-content" id="tab-tuket">
+            <div class="section-title">Vòng tứ kết <span class="badge">1/8</span></div>
+            <div id="tuket-container">
+                <div class="loading"><div class="spinner"></div><div class="loading-text">Đang tải dữ liệu...</div></div>
+            </div>
+        </div>
 
-<!-- BÁN KẾT -->
-<div class="block">
-  <div class="section-title">
-    <span>🥈 BÁN KẾT</span>
-    <button class="refresh-btn" onclick="loadSheetBK()">↻</button>
-  </div>
-  <div id="sheet-bk" class="loading"></div>
-</div>
+        <div class="tab-content" id="tab-banket">
+            <div class="section-title">Vòng bán kết <span class="badge">1/4</span></div>
+            <div id="banket-container">
+                <div class="loading"><div class="spinner"></div><div class="loading-text">Đang tải dữ liệu...</div></div>
+            </div>
+        </div>
 
-<!-- CHUNG KẾT -->
-<div class="block">
-  <div class="section-title">
-    <span>🥇 CHUNG KẾT</span>
-    <button class="refresh-btn" onclick="loadSheetCK()">↻</button>
-  </div>
-  <div id="sheet-ck" class="loading"></div>
-</div>
+        <div class="tab-content" id="tab-chungket">
+            <div class="section-title">Vòng chung kết <span class="badge">Final</span></div>
+            <div id="chungket-container">
+                <div class="loading"><div class="spinner"></div><div class="loading-text">Đang tải dữ liệu...</div></div>
+            </div>
+        </div>
 
-<!-- SƠ ĐỒ -->
-<div class="block">
-  <div class="section-title">🗺️ SƠ ĐỒ THI ĐẤU</div>
-  <div class="sodo-wrapper">
-    <iframe src="https://docs.google.com/spreadsheets/d/1gZz2QRiqqGtxdNdo-UV0Cqz5No0kLqQItTAGb9hPGgo/edit?gid=1139851199#gid=1139851199"></iframe>
-  </div>
-</div>
+        <div class="tab-content" id="tab-sodo">
+            <div class="section-title">Sơ đồ vòng loại trực tiếp <span class="badge">Bracket</span></div>
+            <div id="sodo-container">
+                <div class="loading"><div class="spinner"></div><div class="loading-text">Đang tải dữ liệu...</div></div>
+            </div>
+        </div>
 
-<script>
-// ============ CẤU HÌNH ============
-const SHEET_ID = "1gZz2QRiqqGtxdNdo-UV0Cqz5No0kLqQItTAGb9hPGgo";
-const CONFIG = {
-  doi: [
-    {range:"A1:B5", label:"Bảng A"},
-    {range:"A7:B11", label:"Bảng B"},
-    {range:"A13:B17", label:"Bảng C"},
-    {range:"A19:B23", label:"Bảng D"}
-  ],
-  bang: [
-    {range:"A2:G8", label:"BẢNG A"},
-    {range:"A11:G17", label:"BẢNG B"},
-    {range:"A20:G26", label:"BẢNG C"},
-    {range:"A29:G35", label:"BẢNG D"}
-  ],
-  scoreCols: {
-    // Định nghĩa cột điểm có thể chỉnh sửa theo sheet
-    "bang": [4, 5],      // Cột E, F (index 4,5) là điểm
-    "1.8": [3, 4],       // Cột D, E
-    "bk": [2, 3],        // Cột C, D
-    "ck": [2]            // Cột C
+        <div class="update-time" id="update-time"></div>
+    </div>
+
+    <div class="status-bar" id="status-bar">
+        <div class="status-left">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="status-text">Đang kết nối...</span>
+        </div>
+        <button class="refresh-btn" id="refresh-btn" onclick="loadAllData()">
+            🔄 Làm mới
+        </button>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        const SPREADSHEET_ID = '1gZz2QRiqqGtxdNdo-UV0Cqz5No0kLqQItTAGb9hPGgo';
+        const BASE_URL = 'https://docs.google.com/spreadsheets/d/' + SPREADSHEET_ID + '/gviz/tq';
+
+        var scriptUrl = '';
+        var editMode = false;
+        var pendingSaves = [];
+
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(function(tabBtn) {
+            tabBtn.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(function(t) { t.classList.remove('active'); });
+                document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+                tabBtn.classList.add('active');
+                document.getElementById('tab-' + tabBtn.dataset.tab).classList.add('active');
+                
+                var titles = {
+                    'bangnhom': 'Bảng thi đấu <span class="badge">Vòng loại</span>',
+                    'vongbang': 'Thi đấu vòng bảng <span class="badge">Chi tiết</span>',
+                    'tuket': 'Vòng tứ kết <span class="badge">1/8</span>',
+                    'banket': 'Vòng bán kết <span class="badge">1/4</span>',
+                    'chungket': 'Vòng chung kết <span class="badge">Final</span>',
+                    'sodo': 'Sơ đồ vòng loại trực tiếp <span class="badge">Bracket</span>'
+                };
+                document.getElementById('section-title').innerHTML = titles[tabBtn.dataset.tab] || '';
+            });
+        });
+
+        // Edit mode toggle
+        document.getElementById('edit-toggle').addEventListener('click', function() {
+            editMode = !editMode;
+            this.classList.toggle('active', editMode);
+            updateEditMode();
+        });
+
+        function updateEditMode() {
+            document.querySelectorAll('.score-input').forEach(function(input) {
+                input.readOnly = !editMode;
+            });
+            document.querySelectorAll('.cell-input').forEach(function(input) {
+                input.readOnly = !editMode;
+            });
+            document.querySelectorAll('.save-btn').forEach(function(btn) {
+                btn.style.display = editMode ? 'inline-flex' : 'none';
+            });
+            document.querySelectorAll('.save-all-btn').forEach(function(btn) {
+                btn.style.display = editMode ? 'inline-flex' : 'none';
+            });
+            document.getElementById('edit-indicator').classList.toggle('visible', pendingSaves.length > 0 && editMode);
+        }
+
+        // Script URL input
+        document.getElementById('script-url').addEventListener('change', function() {
+            scriptUrl = this.value.trim();
+            if (scriptUrl) {
+                showToast('Đã lưu URL Apps Script', 'success');
+                document.getElementById('status-dot').className = 'status-dot';
+                document.getElementById('status-text').textContent = 'Đã kết nối';
+            } else {
+                document.getElementById('status-dot').className = 'status-dot disconnected';
+                document.getElementById('status-text').textContent = 'Chưa cấu hình';
+            }
+        });
+
+        // Load saved URL from localStorage
+        (function() {
+            var savedUrl = localStorage.getItem('pickleball_script_url');
+            if (savedUrl) {
+                document.getElementById('script-url').value = savedUrl;
+                scriptUrl = savedUrl;
+            }
+        })();
+
+        document.getElementById('script-url').addEventListener('change', function() {
+            localStorage.setItem('pickleball_script_url', this.value.trim());
+        });
+
+        // Toast notification
+        function showToast(message, type) {
+            var toast = document.getElementById('toast');
+            toast.textContent = (type === 'success' ? '✅ ' : '❌ ') + message;
+            toast.className = 'toast ' + type + ' show';
+            setTimeout(function() {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Fetch sheet data
+        async function fetchSheetData(sheetName, range) {
+            var url = BASE_URL + '?sheet=' + encodeURIComponent(sheetName) + '&range=' + encodeURIComponent(range) + '&tqx=out:json';
+            try {
+                var response = await fetch(url);
+                var text = await response.text();
+                var jsonMatch = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);?/);
+                if (!jsonMatch) throw new Error('Parse error');
+                var data = JSON.parse(jsonMatch[1]);
+                return data.table;
+            } catch (e) {
+                console.error('Error fetching ' + sheetName + ' ' + range + ':', e);
+                return null;
+            }
+        }
+
+        function parseTable(tableData) {
+            if (!tableData || !tableData.rows || !tableData.cols) return { headers: [], rows: [] };
+            var headers = tableData.cols.map(function(c) { return c.label || ''; });
+            var rows = tableData.rows.map(function(row) {
+                return row.c.map(function(cell) {
+                    if (!cell) return '';
+                    if (cell.f) return cell.f;
+                    if (cell.v !== null && cell.v !== undefined) return cell.v;
+                    return '';
+                });
+            });
+            return { headers: headers, rows: rows };
+        }
+
+        function parseScore(scoreStr) {
+            if (!scoreStr || typeof scoreStr !== 'string') return ['', ''];
+            var parts = scoreStr.split('-');
+            return parts.length >= 2 ? [parts[0].trim(), parts.slice(1).join('-').trim()] : [scoreStr, ''];
+        }
+
+        function saveToSheet(sheetName, row, col, value) {
+            if (!scriptUrl) {
+                showToast('Vui lòng cấu hình Apps Script URL trước', 'error');
+                return Promise.resolve({ success: false, error: 'No script URL' });
+            }
+
+            return fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify({
+                    action: 'saveScore',
+                    sheet: sheetName,
+                    row: row,
+                    col: col,
+                    value: value
+                })
+            }).then(function() {
+                return { success: true };
+            }).catch(function(e) {
+                return { success: false, error: e.message };
+            });
+        }
+
+        function saveMatchScoresBatch(sheetName, updates) {
+            if (!scriptUrl) {
+                showToast('Vui lòng cấu hình Apps Script URL trước', 'error');
+                return Promise.resolve({ success: false, error: 'No script URL' });
+            }
+
+            return fetch(scriptUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify({
+                    action: 'saveMatchScores',
+                    sheet: sheetName,
+                    updates: updates
+                })
+            }).then(function() {
+                return { success: true, count: updates.length };
+            }).catch(function(e) {
+                return { success: false, error: e.message };
+            });
+        }
+
+        // Render standings table
+        function renderStandingsTable(data, title, dotClass) {
+            if (!data || data.rows.length === 0) return '';
+            var parsed = parseTable(data);
+            var headers = parsed.headers;
+            var rows = parsed.rows;
+            var filteredRows = rows.filter(function(r) { return r.some(function(c) { return c !== ''; }); });
+            if (filteredRows.length === 0) return '';
+
+            var html = '<div class="card"><div class="card-title"><span class="icon"><span class="group-dot ' + dotClass + '"></span></span>' + title + '</div><table><thead><tr>';
+
+            filteredRows[0].forEach(function(cell, i) {
+                var h = headers[i] || (i === 0 ? 'Đội' : (i === 1 ? 'Điểm' : 'Hệ số'));
+                html += '<th>' + h + '</th>';
+            });
+
+            html += '</tr></thead><tbody>';
+
+            filteredRows.forEach(function(row, idx) {
+                var rankClass = idx < 3 ? 'rank-' + (idx + 1) : '';
+                html += '<tr class="' + rankClass + '">';
+                row.forEach(function(cell, i) {
+                    if (i === 1) {
+                        html += '<td class="points-cell">' + cell + '</td>';
+                    } else if (i === 2) {
+                        html += '<td class="ratio-cell">' + cell + '</td>';
+                    } else {
+                        html += '<td>' + cell + '</td>';
+                    }
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table></div>';
+            return html;
+        }
+
+        // Render match table with save buttons
+        function renderMatchTable(data, title, sheetName, startRow) {
+            if (!data || data.rows.length === 0) return '';
+            var parsed = parseTable(data);
+            var headers = parsed.headers;
+            var rows = parsed.rows;
+            var filteredRows = rows.filter(function(r) { return r.some(function(c) { return c !== ''; }); });
+            if (filteredRows.length === 0) return '';
+
+            var matchCount = filteredRows.length;
+            var cardId = 'card-' + sheetName + '-' + startRow;
+
+            var html = '<div class="card" id="' + cardId + '">';
+            html += '<div class="card-title"><span class="icon">🏆</span>' + title + '</div>';
+            html += '<div style="margin-bottom:10px;text-align:right;">';
+            html += '<button class="save-all-btn" onclick="saveAllInCard(\'' + sheetName + '\', ' + startRow + ', ' + matchCount + ', \'' + cardId + '\')" style="display:' + (editMode ? 'inline-flex' : 'none') + '">💾 Lưu tất cả</button>';
+            html += '</div>';
+            html += '<table><thead><tr>';
+
+            headers.forEach(function(h) {
+                html += '<th>' + (h || '-') + '</th>';
+            });
+            html += '</tr></thead><tbody>';
+
+            filteredRows.forEach(function(row, rowIdx) {
+                var globalRow = startRow + rowIdx;
+                html += '<tr>';
+                row.forEach(function(cell, colIdx) {
+                    var globalCol = colIdx + 1;
+                    var cellValue = String(cell || '');
+                    
+                    // Check if this looks like a score cell (contains "-" or is numeric)
+                    var isScoreCol = headers[colIdx] && (
+                        headers[colIdx].toLowerCase().includes('tỷ') || 
+                        headers[colIdx].toLowerCase().includes('score') ||
+                        headers[colIdx].toLowerCase().includes('kết') ||
+                        headers[colIdx].toLowerCase().includes('result') ||
+                        cellValue.match(/^\d+\s*[-–]\s*\d+$/)
+                    );
+
+                    if (isScoreCol && editMode) {
+                        var scores = parseScore(cellValue);
+                        html += '<td class="editable-cell">';
+                        html += '<div class="cell-score-wrapper">';
+                        html += '<input type="text" class="cell-input" value="' + scores[0] + '" data-sheet="' + sheetName + '" data-row="' + globalRow + '" data-col="' + globalCol + '" data-side="0" oninput="markChanged(this)">';
+                        html += '<span class="cell-separator">-</span>';
+                        html += '<input type="text" class="cell-input" value="' + scores[1] + '" data-sheet="' + sheetName + '" data-row="' + globalRow + '" data-col="' + globalCol + '" data-side="1" oninput="markChanged(this)">';
+                        html += '</div>';
+                        html += '<br><button class="save-btn" onclick="saveSingleCell(this)" style="display:none;margin-top:4px;">💾</button>';
+                        html += '</td>';
+                    } else {
+                        html += '<td>' + cellValue + '</td>';
+                    }
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table></div>';
+            return html;
+        }
+
+        // Render match cards with score inputs and save buttons
+        function renderMatchCards(data, title, sheetName, startRow) {
+            if (!data || data.rows.length === 0) return '';
+            var parsed = parseTable(data);
+            var headers = parsed.headers;
+            var rows = parsed.rows;
+            var filteredRows = rows.filter(function(r) { return r.some(function(c) { return c !== ''; }); });
+            if (filteredRows.length === 0) return '';
+
+            var html = '<div class="card">';
+            html += '<div class="card-title"><span class="icon">🏆</span>' + title + '</div>';
+            html += '<div style="margin-bottom:10px;text-align:right;">';
+            html += '<button class="save-all-btn" onclick="saveAllMatchCards(this)" data-sheet="' + sheetName + '" data-startrow="' + startRow + '" data-count="' + filteredRows.length + '" style="display:' + (editMode ? 'inline-flex' : 'none') + '">💾 Lưu tất cả</button>';
+            html += '</div>';
+
+            filteredRows.forEach(function(row, rowIdx) {
+                var globalRow = startRow + rowIdx;
+                var matchId = 'match-' + sheetName + '-' + globalRow;
+                
+                html += '<div class="match-card" id="' + matchId + '">';
+                html += '<div class="match-label">';
+                html += '<span>Trận ' + (rowIdx + 1)</span>';
+                html += '<button class="save-btn" onclick="saveMatchCard(this)" data-sheet="' + sheetName + '" data-row="' + globalRow + '" data-matchid="' + matchId + '" style="display:' + (editMode ? 'inline-flex' : 'none') + '"> Lưu</button>';
+                html += '</div>';
+
+                // Try to parse match structure: typically [Player1, Player2, Score]
+                var team1 = row[0] || '';
+                var team2 = row[1] || '';
+                var score = row[2] || '';
+                
+                // Additional columns
+                var extraInfo = '';
+                for (var i = 3; i < row.length; i++) {
+                    if (row[i]) {
+                        extraInfo += '<span style="color:var(--text-secondary);font-size:0.72rem;">' + (headers[i] || '') + ': ' + row[i] + '</span> ';
+                    }
+                }
+
+                var scores = parseScore(score);
+                var team1Score = scores[0] || '0';
+                var team2Score = scores[1] || '0';
+
+                html += '<div class="match-row">';
+                html += '<span class="match-team">' + team1 + '</span>';
+                html += '<div class="match-actions">';
+                if (editMode) {
+                    html += '<input type="text" class="score-input match-score-input" value="' + team1Score + '" data-sheet="' + sheetName + '" data-row="' + globalRow + '" data-col="3" data-side="0" oninput="markChanged(this)">';
+                    html += '<span style="font-weight:600;color:var(--text-secondary)">-</span>';
+                    html += '<input type="text" class="score-input match-score-input" value="' + team2Score + '" data-sheet="' + sheetName + '" data-row="' + globalRow + '" data-col="3" data-side="1" oninput="markChanged(this)">';
+                } else {
+                    html += '<span class="match-score">' + team1Score + '<span class="score-separator"> - </span>' + team2Score + '</span>';
+                }
+                html += '</div>';
+                html += '<span class="match-team" style="text-align:right;">' + team2 + '</span>';
+                html += '</div>';
+
+                if (extraInfo) {
+                    html += '<div style="margin-top:6px;">' + extraInfo + '</div>';
+                }
+
+                html += '</div>';
+            });
+
+            html += '</div>';
+            return html;
+        }
+
+        // Mark input as changed
+        function markChanged(input) {
+            input.classList.add('changed');
+            var saveBtn = input.closest('.match-card, .editable-cell, td').querySelector('.save-btn');
+            if (saveBtn) {
+                saveBtn.classList.remove('saved', 'error');
+            }
+            pendingSaves.push({ input: input });
+            document.getElementById('edit-indicator').classList.add('visible');
+        }
+
+        // Save single cell from table
+        function saveSingleCell(btn) {
+            if (!scriptUrl) {
+                showToast('Vui lòng cấu hình Apps Script URL trước', 'error');
+                return;
+            }
+
+            var cell = btn.closest('.editable-cell');
+            var inputs = cell.querySelectorAll('.cell-input');
+            var score1 = inputs[0] ? inputs[0].value : '';
+            var score2 = inputs[1] ? inputs[1].value : '';
+            var sheetName = inputs[0].dataset.sheet;
+            var rowNum = parseInt(inputs[0].dataset.row);
+            var colNum = parseInt(inputs[0].dataset.col);
+            var fullScore = score1 + '-' + score2;
+
+            btn.classList.add('saving');
+            btn.disabled = true;
+
+            saveToSheet(sheetName, rowNum, colNum, fullScore).then(function(result) {
+                if (result.success) {
+                    btn.classList.remove('saving');
+                    btn.classList.add('saved');
+                    btn.textContent = '✅';
+                    inputs.forEach(function(inp) { inp.classList.remove('changed'); });
+                    showToast('Đã lưu tỷ số!', 'success');
+                    setTimeout(function() {
+                        btn.classList.remove('saved');
+                        btn.textContent = '💾';
+                        btn.disabled = false;
+                    }, 2000);
+                } else {
+                    btn.classList.remove('saving');
+                    btn.classList.add('error');
+                    btn.textContent = '❌';
+                    showToast('Lỗi khi lưu: ' + (result.error || ''), 'error');
+                    setTimeout(function() {
+                        btn.classList.remove('error');
+                        btn.textContent = '💾';
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            });
+        }
+
+        // Save all in card (table format)
+        function saveAllInCard(sheetName, startRow, count, cardId) {
+            if (!scriptUrl) {
+                showToast('Vui lòng cấu hình Apps Script URL trước', 'error');
+                return;
+            }
+
+            var card = document.getElementById(cardId);
+            var allInputs = card.querySelectorAll('.cell-input');
+            var updates = [];
+            
+            // Group by sheet/row/col
+            var grouped = {};
+            allInputs.forEach(function(inp) {
+                var key = inp.dataset.sheet + '|' + inp.dataset.row + '|' + inp.dataset.col;
+                if (!grouped[key]) {
+                    grouped[key] = { sheet: inp.dataset.sheet, row: parseInt(inp.dataset.row), col: parseInt(inp.dataset.col), sides: {} };
+                }
+                grouped[key].sides[inp.dataset.side] = inp.value;
+            });
+
+            for (var key in grouped) {
+                var g = grouped[key];
+                var fullScore = (g.sides['0'] || '') + '-' + (g.sides['1'] || '');
+                updates.push({ row: g.row, col: g.col, value: fullScore });
+            }
+
+            var saveBtn = card.querySelector('.save-all-btn');
+            saveBtn.classList.add('saving');
+            saveBtn.disabled = true;
+            saveBtn.innerHTML = '⏳ Đang lưu...';
+
+            saveMatchScoresBatch(sheetName, updates).then(function(result) {
+                if (result.success) {
+                    allInputs.forEach(function(inp) { inp.classList.remove('changed'); });
+                    saveBtn.classList.remove('saving');
+                    saveBtn.innerHTML = '✅ Đã lưu!';
+                    showToast('Đã lưu ' + result.count + ' tỷ số!', 'success');
+                    setTimeout(function() {
+                        saveBtn.innerHTML = '💾 Lưu tất cả';
+                        saveBtn.disabled = false;
+                    }, 2000);
+                } else {
+                    saveBtn.classList.remove('saving');
+                    saveBtn.innerHTML = '❌ Lỗi';
+                    showToast('Lỗi khi lưu!', 'error');
+                    setTimeout(function() {
+                        saveBtn.innerHTML = '💾 Lưu tất cả';
+                        saveBtn.disabled = false;
+                    }, 3000);
+                }
+            });
+        }
+
+        // Save match card
+        function saveMatchCard(btn) {
+            if (!scriptUrl) {
+                showToast('Vui lòng cấu hình Apps Script URL trước', 'error');
+                return;
+            }
+
+            var matchCard = document.getElementById(btn.dataset.matchid);
+            var inputs = matchCard.querySelectorAll('.match-score-input');
+            var sheetName = btn.dataset.sheet;
+            var rowNum = parseInt(btn.dataset.row);
+            
+            var score1 = inputs[0] ? inputs[0].value : '0';
+            var score2 = inputs[1] ? inputs[1].value : '0';
+            var fullScore = score1 + '-' + score2;
+
+            btn.classList.add('saving');
+            btn.disabled = true;
+            btn.textContent = '⏳ Đang lưu...';
+
+            saveToSheet(sheetName, rowNum, 3, fullScore).then(function(result) {
+                if (result.success) {
+                    btn.classList.remove('saving');
+                    btn.classList.add('saved');
+                    btn.textContent = '✅ Đã lưu';
+                    inputs.forEach(function(inp) { inp.classList.remove('changed'); });
+                    showToast('Đã lưu tỷ số trận!', 'success');
+                    setTimeout(function() {
+                        btn.classList.remove('saved');
+                        btn.textContent = '💾 Lưu';
+                        btn.disabled = false;
+                    }, 2000);
+                } else {
+                    btn.classList.remove('saving');
+                    btn.classList.add('error');
+                    btn.textContent = '❌ Lỗi';
+                    showToast('Lỗi khi lưu!', 'error');
+                    setTimeout(function() {
+                        btn.classList.remove('error');
+                        btn.textContent = '💾 Lưu';
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            });
+        }
+
+        // Save all match cards
+        function saveAllMatchCards(btn) {
+            if (!scriptUrl) {
+                showToast('Vui lòng cấu hình Apps Script URL trước', 'error');
+                return;
+            }
+
+            var sheetName = btn.dataset.sheet;
+            var startRow = parseInt(btn.dataset.startrow);
+            var count = parseInt(btn.dataset.count);
+
+            var updates = [];
+            var card = btn.closest('.card');
+            var allInputs = card.querySelectorAll('.match-score-input');
+            
+            var grouped = {};
+            allInputs.forEach(function(inp) {
+                var row = parseInt(inp.dataset.row);
+                if (!grouped[row]) {
+                    grouped[row] = { sides: {} };
+                }
+                grouped[row].sides[inp.dataset.side] = inp.value;
+            });
+
+            for (var row in grouped) {
+                var g = grouped[row];
+                var fullScore = (g.sides['0'] || '0') + '-' + (g.sides['1'] || '0');
+                updates.push({ row: parseInt(row), col: 3, value: fullScore });
+            }
+
+            btn.classList.add('saving');
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Đang lưu...';
+
+            saveMatchScoresBatch(sheetName, updates).then(function(result) {
+                if (result.success) {
+                    allInputs.forEach(function(inp) { inp.classList.remove('changed'); });
+                    btn.classList.remove('saving');
+                    btn.innerHTML = '✅ Đã lưu!';
+                    showToast('Đã lưu ' + result.count + ' tỷ số!', 'success');
+                    setTimeout(function() {
+                        btn.innerHTML = '💾 Lưu tất cả';
+                        btn.disabled = false;
+                    }, 2000);
+                } else {
+                    btn.classList.remove('saving');
+                    btn.innerHTML = '❌ Lỗi';
+                    showToast('Lỗi khi lưu!', 'error');
+                    setTimeout(function() {
+                        btn.innerHTML = '💾 Lưu tất cả';
+                        btn.disabled = false;
+                    }, 3000);
+                }
+            });
+        }
+
+        // Render Sodo table
+        function renderSodoTable(data) {
+            if (!data || data.rows.length === 0) return '';
+            var parsed = parseTable(data);
+            var headers = parsed.headers;
+            var rows = parsed.rows;
+            var filteredRows = rows.filter(function(r) { return r.some(function(c) { return c !== ''; }); });
+            if (filteredRows.length === 0) return '';
+
+            var html = '<div class="card" style="padding: 8px; overflow-x: auto;"><div class="card-title"><span class="icon">📋</span>Sơ đồ thi đấu</div><table class="sodo-table"><thead><tr>';
+
+            headers.forEach(function(h) {
+                html += '<th>' + (h || '') + '</th>';
+            });
+            html += '</tr></thead><tbody>';
+
+            filteredRows.forEach(function(row) {
+                html += '<tr>';
+                row.forEach(function(cell) {
+                    html += '<td>' + cell + '</td>';
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody></table></div>';
+            return html;
+        }
+
+        // Load all data
+        async function loadAllData() {
+            document.getElementById('status-dot').className = 'status-dot loading';
+            document.getElementById('status-text').textContent = 'Đang tải dữ liệu...';
+
+            // Bảng A, B, C, D
+            var sheetNames = ['A', 'B', 'C', 'D'];
+            var titles = ['Bảng A', 'Bảng B', 'Bảng C', 'Bảng D'];
+            var dotClasses = ['dot-a', 'dot-b', 'dot-c', 'dot-d'];
+
+            var bangnhomContainer = document.getElementById('bangnhom-container');
+            var bangnhomHTML = '';
+
+            var results = await Promise.all(
+                sheetNames.map(function(name) { return fetchSheetData(name, 'F1:H5'); })
+            );
+
+            results.forEach(function(data, idx) {
+                if (data) {
+                    bangnhomHTML += renderStandingsTable(data, titles[idx], dotClasses[idx]);
+                } else {
+                    bangnhomHTML += '<div class="card"><div class="card-title"><span class="icon"><span class="group-dot ' + dotClasses[idx] + '"></span></span>' + titles[idx] + '</div><div class="error-msg">Không thể tải dữ liệu</div></div>';
+                }
+            });
+            bangnhomContainer.innerHTML = bangnhomHTML;
+
+            // Vòng bảng - sheet "bang"
+            var rangesBang = [
+                { range: 'A1:F8', title: 'BẢNG A' },
+                { range: 'A10:F17', title: 'BẢNG B' },
+                { range: 'A19:F26', title: 'BẢNG C' },
+                { range: 'A28:F35', title: 'BẢNG D' }
+            ];
+
+            var startRowsBang = [1, 10, 19, 28];
+            var vongbangContainer = document.getElementById('vongbang-container');
+            var vongbangHTML = '';
+
+            var bangResults = await Promise.all(
+                rangesBang.map(function(r) { return fetchSheetData('bang', r.range); })
+            );
+
+            bangResults.forEach(function(data, idx) {
+                if (data) {
+                    vongbangHTML += renderMatchCards(data, rangesBang[idx].title, 'bang', startRowsBang[idx]);
+                }
+            });
+            vongbangContainer.innerHTML = vongbangHTML || '<div class="error-msg">Không thể tải dữ liệu vòng bảng</div>';
+
+            // Tứ kết - sheet "1.8"
+            var rangesTuKet = [
+                { range: 'A2:E3', title: 'Tứ kết 1' },
+                { range: 'A5:E6', title: 'Tứ kết 2' },
+                { range: 'A8:E9', title: 'Tứ kết 3' },
+                { range: 'A11:E12', title: 'Tứ kết 4' }
+            ];
+
+            var startRowsTuKet = [2, 5, 8, 11];
+            var tuketContainer = document.getElementById('tuket-container');
+            var tuketHTML = '';
+
+            var tuketResults = await Promise.all(
+                rangesTuKet.map(function(r) { return fetchSheetData('1.8', r.range); })
+            );
+
+            tuketResults.forEach(function(data, idx) {
+                if (data) {
+                    tuketHTML += renderMatchCards(data, rangesTuKet[idx].title, '1.8', startRowsTuKet[idx]);
+                }
+            });
+            tuketContainer.innerHTML = tuketHTML || '<div class="error-msg">Không thể tải dữ liệu tứ kết</div>';
+
+            // Bán kết - sheet "bk"
+            var rangesBanKet = [
+                { range: 'A3:D4', title: 'Bán kết 1' },
+                { range: 'A6:D7', title: 'Bán kết 2' }
+            ];
+
+            var startRowsBanKet = [3, 6];
+            var banketContainer = document.getElementById('banket-container');
+            var banketHTML = '';
+
+            var banketResults = await Promise.all(
+                rangesBanKet.map(function(r) { return fetchSheetData('bk', r.range); })
+            );
+
+            banketResults.forEach(function(data, idx) {
+                if (data) {
+                    banketHTML += renderMatchCards(data, rangesBanKet[idx].title, 'bk', startRowsBanKet[idx]);
+                }
+            });
+            banketContainer.innerHTML = banketHTML || '<div class="error-msg">Không thể tải dữ liệu bán kết</div>';
+
+            // Chung kết - sheet "ck"
+            var ckContainer = document.getElementById('chungket-container');
+            var ckData = await fetchSheetData('ck', 'A3:C4');
+            if (ckData) {
+                var ckHTML = renderMatchCards(ckData, 'Chung Kết', 'ck', 3);
+                if (ckHTML) {
+                    ckContainer.innerHTML = ckHTML;
+                } else {
+                    ckContainer.innerHTML = '<div class="error-msg">Chưa có dữ liệu chung kết</div>';
+                }
+            } else {
+                ckContainer.innerHTML = '<div class="error-msg">Không thể tải dữ liệu chung kết</div>';
+            }
+
+            // Sơ đồ - sheet "sodo"
+            var sodoContainer = document.getElementById('sodo-container');
+            var sodoData = await fetchSheetData('sodo', 'A1:H21');
+            if (sodoData) {
+                sodoContainer.innerHTML = renderSodoTable(sodoData);
+            } else {
+                sodoContainer.innerHTML = '<div class="error-msg">Không thể tải dữ liệu sơ đồ</div>';
+            }
+
+            // Update time
+            var now = new Date();
+            document.getElementById('update-time').innerHTML = 'KARAOKE RITA <span>' + '</span> - <span>' + now.toLocaleDateString('vi-VN') + '</span>';
+
+            // Update status
+            document.getElementById('status-dot').className = 'status-dot';
+            document.getElementById('status-text').textContent = 'Cập nhật: ' + now.toLocaleTimeString('vi-VN');
+
+            // Re-apply edit mode to new elements
+            updateEditMode();
+        }
+
+        loadAllData();
+        setInterval(loadAllData, 60000);
+    </script>
+</body>
+</html>
+
+
+
+              <script>
+                              const SPREADSHEET_ID = '1gZz2QRiqqGtxdNdo-UV0Cqz5No0kLqQItTAGb9hPGgo';
+
+function doGet(e) {
+  if (e.parameter && e.parameter.action === 'api') {
+    return handleApiRequest(e);
   }
-};
-
-// ============ UTILS ============
-function showToast(message, type = 'success', duration = 3000) {
-  const container = document.getElementById('toast-container');
-  const toast = document.createElement('div');
-  toast.className = `toast ${type}`;
-  toast.textContent = message;
-  container.appendChild(toast);
-
-  setTimeout(() => {
-    toast.style.animation = 'slideIn 0.3s ease reverse';
-    setTimeout(() => toast.remove(), 300);
-  }, duration);
+  return HtmlService.createHtmlOutputFromFile('Index')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)
+    .addMetaTag('viewport', 'width=device-width, initial-scale=1.0');
 }
 
-function showLoading(elementId) {
-  document.getElementById(elementId).innerHTML = '<div class="loading"></div>';
+function doPost(e) {
+  return handleSaveRequest(e);
 }
 
-// ============ GOOGLE SCRIPT CALLS ============
-function callServer(func, ...args) {
-  return new Promise((resolve, reject) => {
-    google.script.run
-      .withSuccessHandler(resolve)
-      .withFailureHandler(reject)
-      [func](...args);
+function handleApiRequest(e) {
+  const action = e.parameter.action || 'read';
+  const sheetName = e.parameter.sheet || '';
+  const range = e.parameter.range || '';
+
+  try {
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    
+    if (action === 'read') {
+      const sheet = ss.getSheetByName(sheetName);
+      if (!sheet) {
+        return createJsonResponse({ success: false, error: 'Sheet không tồn tại' });
+      }
+      const data = sheet.getRange(range).getValues();
+      return createJsonResponse({ success: true, data: data, sheet: sheetName, range: range });
+    }
+    
+    if (action === 'sheets') {
+      const sheets = ss.getSheets().map(s => s.getName());
+      return createJsonResponse({ success: true, sheets: sheets });
+    }
+    
+    return createJsonResponse({ success: false, error: 'Invalid action' });
+  } catch (error) {
+    return createJsonResponse({ success: false, error: error.toString() });
+  }
+}
+
+function handleSaveRequest(e) {
+  try {
+    const postData = e.postData;
+    if (!postData) {
+      return createJsonResponse({ success: false, error: 'No data received' });
+    }
+    
+    const data = JSON.parse(postData.contents);
+    const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    
+    if (data.action === 'saveScore') {
+      return saveScore(ss, data);
+    }
+    
+    if (data.action === 'saveMatchScores') {
+      return saveMatchScores(ss, data);
+    }
+    
+    if (data.action === 'bulkSave') {
+      return bulkSave(ss, data);
+    }
+    
+    return createJsonResponse({ success: false, error: 'Unknown action' });
+  } catch (error) {
+    return createJsonResponse({ success: false, error: error.toString() });
+  }
+}
+
+function saveScore(ss, data) {
+  const sheetName = data.sheet;
+  const row = data.row;
+  const col = data.col;
+  const value = data.value;
+  
+  const sheet = ss.getSheetByName(sheetName);
+  if (!sheet) {
+    return createJsonResponse({ success: false, error: 'Sheet không tồn tại: ' + sheetName });
+  }
+  
+  sheet.getRange(row, col).setValue(value);
+  
+  return createJsonResponse({ 
+    success: true, 
+    message: 'Đã lưu tỷ số!',
+    sheet: sheetName,
+    row: row,
+    col: col,
+    value: value
   });
 }
 
-// ============ LOAD DATA ============
-async function loadSheetData(sheetName, range) {
-  try {
-    const result = await callServer('getSheetData', sheetName, range);
-    if (result.error) throw new Error(result.error);
-    return result;
-  } catch (e) {
-    console.error(`Lỗi tải ${sheetName}:${range}`, e);
-    return null;
+function saveMatchScores(ss, data) {
+  const sheetName = data.sheet;
+  const updates = data.updates;
+  
+  const sheet = ss.getSheetByName(sheetName);
+  if (!sheet) {
+    return createJsonResponse({ success: false, error: 'Sheet không tồn tại: ' + sheetName });
   }
+  
+  let savedCount = 0;
+  for (const update of updates) {
+    if (update.row && update.col && update.value !== undefined) {
+      sheet.getRange(update.row, update.col).setValue(update.value);
+      savedCount++;
+    }
+  }
+  
+  return createJsonResponse({ 
+    success: true, 
+    message: 'Đã lưu ' + savedCount + ' tỷ số!',
+    count: savedCount
+  });
 }
 
-// ============ RENDER TABLE WITH EDITABLE SCORES ============
-function renderTable(data, sheetName, config = {}) {
-  if (!data || data.error) {
-    return `<div style="padding:12px;color:#c0392b;text-align:center">
-      ⚠️ ${data?.error || 'Không thể tải dữ liệu'}
-    </div>`;
-  }
-
-  const { values, formatted, rows, cols } = data;
-  const scoreCols = CONFIG.scoreCols[sheetName] || [];
+function bulkSave(ss, data) {
+  const saves = data.saves;
+  let results = [];
   
-  let html = '<table><thead><tr>';
-  
-  // Header
-  for (let c = 0; c < cols; c++) {
-    const header = formatted[0]?.[c] || `Cột ${String.fromCharCode(65+c)}`;
-    html += `<th>${header}</th>`;
-  }
-  html += '<th>Thao tác</th></tr></thead><tbody>';
-  
-  // Body rows (skip header row)
-  for (let r = 1; r < rows; r++) {
-    html += '<tr>';
-    for (let c = 0; c < cols; c++) {
-      const cellValue = values[r]?.[c] ?? '';
-      const cellDisplay = formatted[r]?.[c] ?? '';
-      const isScoreCell = scoreCols.includes(c);
-      const rowIdx = r + 1; // 1-based for Apps Script
-      const colIdx = c + 1;
-      const cellLabel = `${String.fromCharCode(64+colIdx)}${rowIdx}`;
-      
-      if (isScoreCell) {
-        html += `
-          <td class="score-cell">
-            <input type="text" class="score-input" 
-                   id="score_${sheetName}_${r}_${c}"
-                   value="${cellDisplay}"
-                   data-sheet="${sheetName}"
-                   data-row="${rowIdx}"
-                   data-col="${colIdx}"
-                   data-label="${cellLabel}"
-                   placeholder="-">
-            <button class="save-btn" onclick="saveScoreCell(this)">💾 Lưu</button>
-          </td>
-        `;
+  for (const save of saves) {
+    try {
+      const sheet = ss.getSheetByName(save.sheet);
+      if (sheet) {
+        sheet.getRange(save.row, save.col).setValue(save.value);
+        results.push({ success: true, sheet: save.sheet, row: save.row, col: save.col });
       } else {
-        // Format đặc biệt cho một số sheet
-        let display = cellDisplay;
-        if (["bang", "1.8", "bk"].includes(sheetName) && (c === 2 || c === 3)) {
-          display = display.toString().replace(/ - /g, "<br>");
-        }
-        html += `<td>${display || ''}</td>`;
+        results.push({ success: false, error: 'Sheet không tồn tại' });
       }
-    }
-    html += '<td><small style="color:#7f8c8d">Sửa điểm → Lưu</small></td></tr>';
-  }
-  
-  html += '</tbody></table>';
-  return html;
-}
-
-// ============ SAVE SCORE ============
-async function saveScoreCell(btn) {
-  const cell = btn.previousElementSibling;
-  const sheetName = cell.dataset.sheet;
-  const row = parseInt(cell.dataset.row);
-  const col = parseInt(cell.dataset.col);
-  const label = cell.dataset.label;
-  const value = cell.value.trim();
-  
-  // UI states
-  const originalBtnText = btn.textContent;
-  btn.disabled = true;
-  btn.textContent = '⏳';
-  btn.classList.add('saving');
-  cell.classList.remove('saved', 'error');
-  
-  try {
-    const result = await callServer('saveScore', sheetName, row, col, value, label);
-    
-    if (result.success) {
-      cell.classList.add('saved');
-      showToast(result.message, 'success', 2500);
-      // Auto-refresh related section after 2s
-      setTimeout(() => {
-        if (sheetName === 'bang') loadBangOrdered();
-        else if (sheetName === '1.8') loadSheet18();
-        else if (sheetName === 'bk') loadSheetBK();
-        else if (sheetName === 'ck') loadSheetCK();
-      }, 2000);
-    } else {
-      throw new Error(result.error);
-    }
-  } catch (e) {
-    cell.classList.add('error');
-    showToast(`❌ Lỗi: ${e.message}`, 'error', 4000);
-    console.error('Save error:', e);
-  } finally {
-    btn.disabled = false;
-    btn.textContent = originalBtnText;
-    btn.classList.remove('saving');
-  }
-}
-
-// ============ LOAD SECTIONS ============
-async function loadDoiOrdered() {
-  showLoading('sheet-doi');
-  let html = '<div class="doi-scroll">';
-  
-  for (const cfg of CONFIG.doi) {
-    const data = await loadSheetData('doi', cfg.range);
-    html += `<div class="doi-card">
-      <div style="font-weight:700;color:var(--dark);margin-bottom:8px;text-align:center">
-        ${cfg.label}
-      </div>`;
-    html += renderTable(data, 'doi');
-    html += '</div>';
-  }
-  html += '</div>';
-  document.getElementById('sheet-doi').innerHTML = html;
-}
-
-async function loadBangOrdered() {
-  showLoading('sheet-bang');
-  let html = '';
-  
-  for (const cfg of CONFIG.bang) {
-    const data = await loadSheetData('bang', cfg.range);
-    html += `<div style="margin-bottom:20px">
-      <div style="background:#34495e;color:#fff;padding:6px 10px;border-radius:4px;margin-bottom:8px;font-weight:600">
-        ${cfg.label}
-      </div>`;
-    html += renderTable(data, 'bang');
-    html += '</div>';
-  }
-  document.getElementById('sheet-bang').innerHTML = html;
-}
-
-async function loadSheet18() {
-  showLoading('sheet-18');
-  const data = await loadSheetData('1.8', 'A1:E12');
-  document.getElementById('sheet-18').innerHTML = renderTable(data, '1.8');
-}
-
-async function loadSheetBK() {
-  showLoading('sheet-bk');
-  const data = await loadSheetData('bk', 'A1:D7');
-  document.getElementById('sheet-bk').innerHTML = renderTable(data, 'bk');
-}
-
-async function loadSheetCK() {
-  showLoading('sheet-ck');
-  const data = await loadSheetData('ck', 'A2:C4');
-  document.getElementById('sheet-ck').innerHTML = renderTable(data, 'ck');
-}
-
-async function refreshAll() {
-  showToast('🔄 Đang làm mới dữ liệu...', 'success', 1500);
-  await Promise.all([
-    loadDoiOrdered(),
-    loadBangOrdered(), 
-    loadSheet18(),
-    loadSheetBK(),
-    loadSheetCK()
-  ]);
-  showToast('✅ Đã cập nhật dữ liệu mới!', 'success');
-}
-
-// ============ INIT ============
-document.addEventListener('DOMContentLoaded', () => {
-  refreshAll();
-  // Auto-refresh every 30 seconds
-  setInterval(refreshAll, 30000);
-});
-
-// Enter key to save score
-document.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter' && e.target.classList.contains('score-input')) {
-    e.preventDefault();
-    const btn = e.target.nextElementSibling;
-    if (btn?.classList.contains('save-btn')) {
-      saveScoreCell(btn);
+    } catch (e) {
+      results.push({ success: false, error: e.toString() });
     }
   }
-});
-</script>
+  
+  return createJsonResponse({ 
+    success: true, 
+    message: 'Đã lưu ' + results.filter(r => r.success).length + ' ô dữ liệu!',
+    results: results
+  });
+}
 
-</body>
-</html>
+function createJsonResponse(data) {
+  return ContentService.createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+
+              </script>
+                        </body>
+                        </html>
+                    
